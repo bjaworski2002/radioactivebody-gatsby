@@ -1,38 +1,36 @@
 import styled from "styled-components";
 import {up, down, between, only} from 'styled-breakpoints';
-import Button from "./Button";
-import {SubTitle, SubText} from "../styles/globalStyled"
 import React from 'react';
 import {StaticImage} from "gatsby-plugin-image"
-export default function AboutUs(props) {
+import {SubTitle, SubText} from "../styles/globalStyled"
+
+export default function MeetUs(props) {
     return (
         <Container>
             {/*Tekst panelu po lewej stronie. Możliwość zmiany na tekst pobierany z CMS-a*/}
             <Left>
-                <SubTitle>Kim jesteśmy?</SubTitle>
-                <SubText>RadioActiveBody to ekskluzywne studio treningów personalnych, które mieści się w centrum
-                    Starego Podgórza w Krakowie.</SubText>
-                <SubText>Tu znajdziesz spokój, intymność, przyjazną atmosferę, gdzie z nami będziesz mógł realizować
-                    swoje cele!</SubText>
-                <SubText last>Każde z nas ma inną historię, każdy z nas zaczynał inaczej, ale stworzyliśmy razem zespół
-                    ludzi z pasją.
-                    Powstało studio treningów personalnych jedyne w swoim rodzaju! Jako team dążymy do perfekcji i
-                    najwyższych kwalifikacji.
-                    To jest to, co nas odróżnia.</SubText>
-                <Button text={"Zobacz naszą ofertę!"} size={24}/>
+                <SubTitle>Poznaj nas!</SubTitle>
+                <SubText>RadioActiveBody to sztab gruntownie
+                  wykształconych i wykwalifikowanych
+                  specjalistów w dziedzinie zdrowia
+                  i kondycji fizycznej.</SubText>
+                <SubText>Działają w różnych dziedzinach sportu,
+                  rehabilitacji, dietetyki czy suplementacji
+                  po to, aby wspólnie tworzyć najlepsze
+                  plany treningowe właśnie dla Ciebie.</SubText>
             </Left>
             {/*Zdjęcie oraz efekt svg*/}
             <Right>
                 <ImageCont>
                   <img
                     alt=""
-                    src={`${process.env.STRAPI_IMAGE_URL}/medium_o_nas_984bf4dcc0.png`}
+                    src={`${process.env.STRAPI_IMAGE_URL}/large_trenerzy_d21913ffdb.png`}
                   />
                     {/*<Image src={"/medium_o_nas_984bf4dcc0.png"} layout={"fill"} objectFit={"cover"}
                            objectPosition={"bottom center"}/>*/}
                 </ImageCont>
                 <SvgCont>
-                  <StaticImage src={"../assets/Kropki.svg"} alt={""}/>
+                  <StaticImage src={"../assets/circle.svg"} alt={""}/>
                 </SvgCont>
             </Right>
         </Container>
@@ -40,14 +38,15 @@ export default function AboutUs(props) {
 }
 const Container = styled.section`
   width: 100%;
-  margin: 10rem 0;
+  margin: 10rem 0 5rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   ${down("lg")} {
     flex-direction: column-reverse;
     text-align: center;
+    align-items: center;
   }
 `
 const Left = styled.div`
@@ -66,46 +65,60 @@ const Left = styled.div`
   ${down("sm")} {
     width: calc(100% - 2rem);
   }
+
 `
 const Right = styled.div`
   position: relative;
   margin-left: 4rem;
-  width: 22rem;
-  height: 30em;
+  width: 30rem;
+  height: 22rem;
   margin-bottom: 4rem;
-
-  ${down("lg")} {
-    margin-left: 0;
+  
+  ${down("xl")} {
+    width: 25rem;
+    height: 20rem;
+    margin-left: 2.5rem;
   }
   
+  ${down("lg")} {
+    margin-left: 0;
+    margin-bottom: 8rem;
+    width: 30rem;
+    height: 22rem;
+  }
+  ${down("md")} {
+    width: 25rem;
+    height: 20rem;
+    margin-left: 0;
+    margin-bottom: 8rem;
+   }
   ${down("sm")} {
-    margin-bottom: 0;
-    margin-left: 4rem;
+    width: calc(100% - 2rem);
+    height: 20rem;
+    margin-bottom: 4rem;
   }
 `
 const ImageCont = styled.div`
-  z-index: 1;
-  position: absolute;
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 60%);
-  width: 21rem;
-  height: 28rem;
+  
+  position: relative;
+  width: 100%;
+  height: 100%;
   * {
+    border-radius: 2rem;
     position: relative;
     width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: bottom center;
   }
-
-  ${down("sm")} {
-    width: 18rem;
-    height: 26rem;
-  }
+  
 `
 const SvgCont = styled.div`
   position: absolute;
-  transform: translateY(13rem) translateX(2rem);
-
+  top: 50%;
+  left: -2rem;
+  z-index: 1;
   ${down("sm")} {
-    transform: translateY(9rem) translateX(1rem);
+    display: none;
   }
 `

@@ -2,6 +2,8 @@ import styled from "styled-components";
 import {up, down, between, only} from 'styled-breakpoints';
 import React from 'react';
 import {StaticImage} from "gatsby-plugin-image"
+import {SubTitle, SubText} from "../styles/globalStyled"
+
 export default function OurTrainings(props) {
     return (
         <Container>
@@ -52,40 +54,15 @@ const Left = styled.div`
   ${down("xl")} {
     width: 30rem;
   }
-
+  ${down("md")} {
+    width: 28rem;
+  }
   ${down("sm")} {
-    width: 20rem;
+    width: calc(100% - 2rem);
   }
 
 `
-const SubTitle = styled.h2`
-  font-size: 2.5rem;
-  line-height: 3.5rem;
-  color: white;
-  margin-bottom: 2rem;
 
-  &::before {
-    border-left: 0.5rem solid #FFDA54;
-    content: "";
-    padding-right: 1rem;
-  }
-`
-const SubText = styled.p`
-  color: white;
-  font-size: 1.55rem;
-  line-height: 1.8rem;
-
-  ${down("xl")} {
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-  }
-
-  ${down("sm")} {
-    font-size: 1.25rem;
-    line-height: 1.4rem;
-  }
-  font-weight: 200;
-`
 const Right = styled.div`
   position: relative;
   width: 28rem;

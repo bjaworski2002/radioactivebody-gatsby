@@ -33,7 +33,7 @@ module.exports = {
         params: {},
         collectionTypes: [
           { name: `treners`, endpoint: "api/treners?populate=image" },
-          { name: `trenings`, endpoint: "api/trenings?populate=image" },
+          { name: `trenings`, endpoint: "api/trenings?populate=zawartosc,image" },
           /*`trenings`*/],
         singleTypes: [{ name: `dane`, endpoint: "api/dane" }],
       },

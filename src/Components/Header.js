@@ -6,7 +6,7 @@ import { faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icon
 import { up, down, between, only } from 'styled-breakpoints';
 import {StaticImage} from "gatsby-plugin-image"
 
-export default function Header(props){
+export default function Header(){
     /*State odpowiadający za aktywne menu hamburgerowe*/
     const [active, setActive] = useState(false)
     return(<Container>

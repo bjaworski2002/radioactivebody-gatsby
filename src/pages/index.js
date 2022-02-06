@@ -7,8 +7,12 @@ import AboutUs from "../Components/AboutUs";
 import BreakLine from "../Components/BreakLine";
 import OurTrainings from "../Components/OurTrainings";
 import WorkoutTypes from "../Components/WorkoutTypes";
+import MeetUs from "../Components/MeetUs"
+import TrainersList from "../Components/TrainersList"
 import {StaticQuery} from "gatsby"
 import '../styles/globals.css'
+import ContactPanel from "../Components/ContactPanel"
+import Footer from "../Components/Footer"
 const theme = createTheme({
   xxs: '0px',
   xs: '380px',
@@ -20,12 +24,7 @@ const theme = createTheme({
 
 export default function Home({data}) {
   return (
-    <div>
-      {/*<Head>
-        <title>RadioActiveBody</title>
-        <meta name="description" content="RadioActiveBody to ekskluzywne studio treningów personalnych, które mieści się w centrum Starego Podgórza w Krakowie." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>*/}
+    <div style={{width: '100%', overflow: "hidden"}}>
       {/*Themeprovider ustawiający breakpointy dla styled-components*/}
       <ThemeProvider theme={theme}>
         <Header/>
@@ -35,6 +34,11 @@ export default function Home({data}) {
         <OurTrainings />
         <WorkoutTypes />
         <BreakLine reverse={true} />
+        <MeetUs />
+        <TrainersList />
+        <BreakLine reverse={false} />
+        <ContactPanel />
+        <Footer />
       </ThemeProvider>
     </div>
   )
