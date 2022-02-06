@@ -19,7 +19,7 @@ export default function AboutUs(props) {
                     Powstało studio treningów personalnych jedyne w swoim rodzaju! Jako team dążymy do perfekcji i
                     najwyższych kwalifikacji.
                     To jest to, co nas odróżnia.</SubText>
-                <Button text={"Zobacz naszą ofertę!"} size={24}/>
+                <Button target={"ourTrainings"} text={"Zobacz naszą ofertę!"} size={24}/>
             </Left>
             {/*Zdjęcie oraz efekt svg*/}
             <Right>

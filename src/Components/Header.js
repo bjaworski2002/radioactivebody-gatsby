@@ -17,7 +17,7 @@ export default function Header(){
             {/*Hiperłącza headera dostępne przy szerokościach lg i większych*/}
             <Right>
                 <Href to={"aboutUs"} smooth={true} duration={500}>O nas</Href>
-                <Href to={"outTrainings"} smooth={true} duration={500} >Oferta</Href>
+                <Href to={"ourTrainings"} smooth={true} duration={500} >Oferta</Href>
                 <Href to={"coaches"} smooth={true} duration={500} >Trenerzy</Href>
                 <Href to={"contact"} smooth={true} duration={500} >Kontakt</Href>
                 <Href to={"aboutUs"} smooth={true} duration={500} icon><FontAwesomeIcon style={{height: '2rem'}} icon={faFacebookSquare} /></Href>
@@ -31,7 +31,7 @@ export default function Header(){
             </Hamburger>
             <Navigation active={active}>
                 <Href to={"aboutUs"} smooth={true} duration={500} menu>O nas</Href>
-                <Href to={"outTrainings"} smooth={true} duration={500} menu>Oferta</Href>
+                <Href to={"ourTrainings"} smooth={true} duration={500} menu>Oferta</Href>
                 <Href to={"coaches"} smooth={true} duration={500} menu>Trenerzy</Href>
                 <Href to={"contact"} smooth={true} duration={500} menu>Kontakt</Href>
                 <Href to={"aboutUs"} smooth={true} duration={500} menu icon><FontAwesomeIcon style={{height: '2rem'}} icon={faFacebookSquare} /></Href>

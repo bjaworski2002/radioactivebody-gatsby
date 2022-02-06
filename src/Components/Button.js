@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import {Link} from "react-scroll"
 export default function Button(props){
     return (
+      <Link to={props.target} smooth={true} duration={500}>
         <StyledButton style={{fontSize: props.size + 'px'}}>
             {props.text}
         </StyledButton>
+      </Link>
     )
 }
 const StyledButton = styled.button`

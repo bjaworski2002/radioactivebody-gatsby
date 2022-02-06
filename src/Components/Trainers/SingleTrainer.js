@@ -67,8 +67,8 @@ const ImageOuter = styled.div`
     height: 26rem;
   }
   ${down("sm")}{
-    width: calc(100% - 2rem);
-    height: 110vw;
+    width: calc(100% - 4rem);
+    height: 100vw;
   }
 `
 const ImageCont = styled.div`

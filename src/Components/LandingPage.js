@@ -12,8 +12,8 @@ export default function LandingPage() {
                     <TitleText>Treningi Personalne</TitleText>
                     <SubText>Dopasowane do <br/> twoich potrzeb</SubText>
                     <ButtonContainer>
-                        <Button text={"Poznaj nas!"} size={24}/>
-                        <Button text={"Sprawdź!"} size={24}/>
+                        <Button target={"aboutUs"} text={"Poznaj nas!"} size={24}/>
+                        <Button target={"ourTrainings"} text={"Sprawdź!"} size={24}/>
                     </ButtonContainer>
                 </InnerCont>
             </OuterCont>
