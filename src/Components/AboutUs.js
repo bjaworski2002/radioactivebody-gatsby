@@ -6,7 +6,7 @@ import React from 'react';
 import {StaticImage} from "gatsby-plugin-image"
 export default function AboutUs(props) {
     return (
-        <Container>
+        <Container id={"aboutUs"}>
             {/*Tekst panelu po lewej stronie. Możliwość zmiany na tekst pobierany z CMS-a*/}
             <Left>
                 <SubTitle>Kim jesteśmy?</SubTitle>
@@ -40,7 +40,8 @@ export default function AboutUs(props) {
 }
 const Container = styled.section`
   width: 100%;
-  margin: 10rem 0;
+  margin: 6rem 0 8rem;
+  padding-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;

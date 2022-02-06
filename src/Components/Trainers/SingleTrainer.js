@@ -39,7 +39,7 @@ const MainCont = styled.div`
 const TextCont = styled.div`
   width: 42rem;
   margin: 2rem;
-  text-align: ${props => props.isEven ? `left` : `right`};
+  text-align: left;
   ${only("lg")} {
     margin-left: ${props => props.isEven ? `2rem` : `0`};
     margin-right: ${props => props.isEven ? `0` : `2rem`};

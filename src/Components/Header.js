@@ -5,22 +5,23 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { up, down, between, only } from 'styled-breakpoints';
 import {StaticImage} from "gatsby-plugin-image"
+import {Link} from "react-scroll"
 
 export default function Header(){
     /*State odpowiadający za aktywne menu hamburgerowe*/
     const [active, setActive] = useState(false)
     return(<Container>
             <Left>
-                <a href={"#"}><StaticImage src={"../assets/Logo.svg"} alt={"RadioActiveBody"}/></a>
-            </Left>
+                <Link to={"landingPage"} smooth={true} duration={500}><StaticImage src={"../assets/Logo.svg"} alt={"RadioActiveBody"}/></Link>
+            </Left>landingPage
             {/*Hiperłącza headera dostępne przy szerokościach lg i większych*/}
             <Right>
-                <Href href={"#"} >O nas</Href>
-                <Href href={"#"} >Oferta</Href>
-                <Href href={"#"} >Trenerzy</Href>
-                <Href href={"#"} >Kontakt</Href>
-                <Href href={"#"} icon><FontAwesomeIcon style={{height: '2rem'}} icon={faFacebookSquare} /></Href>
-                <Href href={"#"} icon><FontAwesomeIcon style={{height: '2rem'}} icon={faInstagram} /></Href>
+                <Href to={"aboutUs"} smooth={true} duration={500}>O nas</Href>
+                <Href to={"outTrainings"} smooth={true} duration={500} >Oferta</Href>
+                <Href to={"coaches"} smooth={true} duration={500} >Trenerzy</Href>
+                <Href to={"contact"} smooth={true} duration={500} >Kontakt</Href>
+                <Href to={"aboutUs"} smooth={true} duration={500} icon><FontAwesomeIcon style={{height: '2rem'}} icon={faFacebookSquare} /></Href>
+                <Href to={"aboutUs"} smooth={true} duration={500} icon><FontAwesomeIcon style={{height: '2rem'}} icon={faInstagram} /></Href>
             </Right>
             {/*Wysuwane menu dostępne przy szerokościach mniejszych niż lg*/}
             <Hamburger onClick={() => setActive(!active)}>
@@ -29,12 +30,12 @@ export default function Header(){
                 </HamburgerBox>
             </Hamburger>
             <Navigation active={active}>
-                <Href href={"#"} menu>O nas</Href>
-                <Href href={"#"} menu>Oferta</Href>
-                <Href href={"#"} menu>Trenerzy</Href>
-                <Href href={"#"} menu>Kontakt</Href>
-                <Href href={"#"} menu icon><FontAwesomeIcon style={{height: '2rem'}} icon={faFacebookSquare} /></Href>
-                <Href href={"#"} menu icon><FontAwesomeIcon style={{height: '2rem'}} icon={faInstagram} /></Href>
+                <Href to={"aboutUs"} smooth={true} duration={500} menu>O nas</Href>
+                <Href to={"outTrainings"} smooth={true} duration={500} menu>Oferta</Href>
+                <Href to={"coaches"} smooth={true} duration={500} menu>Trenerzy</Href>
+                <Href to={"contact"} smooth={true} duration={500} menu>Kontakt</Href>
+                <Href to={"aboutUs"} smooth={true} duration={500} menu icon><FontAwesomeIcon style={{height: '2rem'}} icon={faFacebookSquare} /></Href>
+                <Href to={"aboutUs"} smooth={true} duration={500} menu icon><FontAwesomeIcon style={{height: '2rem'}} icon={faInstagram} /></Href>
             </Navigation>
     </Container>)
 }
@@ -60,7 +61,7 @@ const Right = styled.div`
     display: none;
   }
 `
-const Href = styled.a`
+const Href = styled(Link)`
   height: 2rem;
   font-size: 1.5rem;
   margin-right: ${props => props.icon ? `1rem` : `1.5rem`};

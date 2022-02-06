@@ -2,13 +2,9 @@ import styled from "styled-components";
 import React, { useEffect } from "react"
 import {up, down, between, only} from 'styled-breakpoints';
 import Button from "./Button";
-import { StaticImage } from "gatsby-plugin-image"
 export default function LandingPage() {
-    useEffect(()=>{
-      console.log(`${process.env.STRAPI_IMAGE_URL}/large_tytul1_29dca2ac13.png`)
-    },[])
     return (
-        <Section>
+        <Section id={"landingPage"}>
             {/*OuterCont - Kontener o wysokości i szerokości screena. Użyty do zastosowania flexa*/}
             <OuterCont>
                 {/*InnerCont - panel z napisami oraz przyciskami*/}

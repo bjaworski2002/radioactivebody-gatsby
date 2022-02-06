@@ -6,7 +6,7 @@ import {SubTitle, SubText} from "../styles/globalStyled"
 
 export default function MeetUs(props) {
     return (
-        <Container>
+        <Container id={"coaches"}>
             {/*Tekst panelu po lewej stronie. Możliwość zmiany na tekst pobierany z CMS-a*/}
             <Left>
                 <SubTitle>Poznaj nas!</SubTitle>
@@ -38,7 +38,8 @@ export default function MeetUs(props) {
 }
 const Container = styled.section`
   width: 100%;
-  margin: 10rem 0 5rem;
+  margin: 6rem 0 5rem;
+  padding-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;

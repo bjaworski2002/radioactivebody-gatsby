@@ -1,10 +1,11 @@
 import styled from "styled-components"
 import React from "react"
+import {animateScroll as scroll} from 'react-scroll'
 export default function Footer(){
   return (
     <FooterCont>
       <span>© 2022 RadioActiveBody. Design i wykonanie Bartosz Jaworski.</span>
-      <span><b>Kliknij, aby wrócić na górę strony!</b></span>
+      <a onClick={() => scroll.scrollToTop()}><b>Kliknij, aby wrócić na górę strony!</b></a>
     </FooterCont>
   )
 }

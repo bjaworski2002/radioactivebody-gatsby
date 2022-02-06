@@ -6,7 +6,7 @@ import {SubTitle, SubText} from "../styles/globalStyled"
 
 export default function OurTrainings(props) {
     return (
-        <Container>
+        <Container id={"outTrainings"}>
             {/*Tekst panelu po prawej stronie. Możliwość zmiany na tekst pobierany z CMS-a*/}
             <Left>
                 <SubTitle>Nasze treningi</SubTitle>
