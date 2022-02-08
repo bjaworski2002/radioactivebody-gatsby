@@ -26,7 +26,7 @@ export default function AboutUs(props) {
                 <ImageCont>
                   <img
                     alt=""
-                    src={`${process.env.STRAPI_IMAGE_URL}/medium_o_nas_984bf4dcc0.png`}
+                    src={`${process.env.STRAPI_IMAGE_URL}/medium_o_nas_01736c6b3d.png`}
                   />
                     {/*<Image src={"/medium_o_nas_984bf4dcc0.png"} layout={"fill"} objectFit={"cover"}
                            objectPosition={"bottom center"}/>*/}

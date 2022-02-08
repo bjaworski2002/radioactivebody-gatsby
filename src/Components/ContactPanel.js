@@ -12,7 +12,7 @@ const ContactPanel = () => {
       <ImgCont>
         <img
           alt=""
-          src={`${process.env.STRAPI_IMAGE_URL}/medium_kontakt_dbbd5ffe84.png`}
+          src={`${process.env.STRAPI_IMAGE_URL}/medium_kontakt_6eb0b2d6fd.png`}
         />
       </ImgCont>
       <FormCont>

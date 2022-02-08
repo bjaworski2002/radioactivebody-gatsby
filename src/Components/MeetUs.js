@@ -24,7 +24,7 @@ export default function MeetUs(props) {
                 <ImageCont>
                   <img
                     alt=""
-                    src={`${process.env.STRAPI_IMAGE_URL}/large_trenerzy_d21913ffdb.png`}
+                    src={`${process.env.STRAPI_IMAGE_URL}/large_trenerzy_9624ed46e2.png`}
                   />
                     {/*<Image src={"/medium_o_nas_984bf4dcc0.png"} layout={"fill"} objectFit={"cover"}
                            objectPosition={"bottom center"}/>*/}

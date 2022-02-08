@@ -5,7 +5,9 @@ import Button from "../Button"
 import { StaticImage } from "gatsby-plugin-image"
 
 export default function WorkoutItem(props) {
-
+  useEffect(() => {
+    console.log(`${process.env.STRAPI_API_URL}${props.data.image.data[0].attributes.url}`)
+  }, [])
   return (
     <Container>
       <ArrowsCont>
