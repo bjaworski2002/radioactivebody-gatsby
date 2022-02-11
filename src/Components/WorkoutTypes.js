@@ -26,7 +26,7 @@ const WorkoutTypes = ({ data }) => {
   return (
     <StaticQuery query={query} render={data =>
       <Section>
-        <Carousel renderArrow={myArrow} breakPoints={breakPoints}
+        <Carousel renderArrow={myArrow} breakPoints={breakPoints} disableArrowsOnEnd={true}
           /*style={{ overflow: "visible", backgroundColor: "red" }}*/>
           {data.allStrapiTrenings.nodes[0].data.map((e, index) => <WorkoutItem data={e.attributes} key={index} />)}
         </Carousel>

@@ -15,7 +15,7 @@ export default function SingleTrainer(props) {
         <ImageCont>
           <img
             alt=""
-            src={`${process.env.STRAPI_API_URL}${props.data.attributes.image.data.attributes.url}`}
+            src={`${props.data.attributes.image.data.attributes.url}`}
           />
         </ImageCont>
         <SvgCont isEven={props.index % 2 === 0}>

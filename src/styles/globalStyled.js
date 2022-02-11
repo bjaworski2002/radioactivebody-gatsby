@@ -15,8 +15,8 @@ export const SubTitle = styled.h2`
 `
 export const SubText = styled.p`
   color: white;
-  font-size: 1.55rem;
-  line-height: 1.8rem;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
 
   ${down("xl")} {
     font-size: 1.4rem;

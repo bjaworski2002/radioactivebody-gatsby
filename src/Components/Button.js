@@ -17,7 +17,9 @@ const StyledButton = styled.button`
   border-radius: 1em;
   color: black;
   background-color: #FFDA54;
+  transition: 0.2s;
+  opacity: 0.8;
   :hover{
-    background-color: #DD9045;
+    opacity: 1;
   }
 `

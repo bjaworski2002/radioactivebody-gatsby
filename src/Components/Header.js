@@ -69,6 +69,10 @@ const Href = styled(Link)`
   color: white;
   white-space: nowrap;
   font-weight: 800;
+  transition: 0.2s;
+  :hover{
+    color: #FFDA54;
+  }
 `
 const Hamburger = styled.div`
   display: inline-block;

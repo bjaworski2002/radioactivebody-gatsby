@@ -27,8 +27,11 @@ module.exports = {
         collectionTypes: [
           { name: `treners`, endpoint: "api/treners?populate=image" },
           { name: `trenings`, endpoint: "api/trenings?populate=zawartosc,image" },
-          /*`trenings`*/],
-        singleTypes: [{ name: `dane`, endpoint: "api/dane" }],
+          ],
+        singleTypes: [
+          { name: `dane`, endpoint: "api/dane" },
+          { name: `files`, endpoint: "api/upload/files" },
+        ],
       },
     },
   ],

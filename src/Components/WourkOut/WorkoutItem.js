@@ -21,7 +21,7 @@ export default function WorkoutItem(props) {
       </ButtonCont>
       <WorkOutImg
         alt=""
-        src={`${process.env.STRAPI_API_URL}${props.data.image.data[0].attributes.url}`}
+        src={`${props.data.image.data[0].attributes.url}`}
       />
       <Title>{props.data.nazwa}</Title>
       <Paragraph>{props.data.opis}</Paragraph>

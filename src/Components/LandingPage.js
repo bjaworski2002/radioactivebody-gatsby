@@ -24,7 +24,7 @@ export default function LandingPage() {
               <BackgroundImage>
                 <img
                   alt=""
-                  src={`${process.env.STRAPI_IMAGE_URL}/large_tytul1_642b628775.png`}
+                  src={`https://res.cloudinary.com/dcmlieuld/image/upload/v1644575100/large_tytul1_76feb15deb.png`}
                 />
               </BackgroundImage>
             </Background>

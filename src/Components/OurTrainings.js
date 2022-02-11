@@ -21,7 +21,7 @@ export default function OurTrainings(props) {
                 <ImageCont>
                   <img
                     alt=""
-                    src={`${process.env.STRAPI_IMAGE_URL}/oferta_5a995e6c06.png`}
+                    src={`https://res.cloudinary.com/dcmlieuld/image/upload/v1644575087/thumbnail_oferta_ba9a865c18.png`}
                   />
                 </ImageCont>
                 <SvgCont>
