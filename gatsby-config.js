@@ -12,12 +12,14 @@ module.exports = {
     title: 'Poznaj studio Terningów Personalnych w Krakowie',
     description: 'RadioActiveBody - siłownia z wykwalifikowanymi trenerami personalnymi znajdująca się w centrum Starego Podgórza w Krakowie',
     author: 'Bartosz Jaworski',
+    favicon: "/favicon.svg"
   },
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-strapi`,
       options: {

@@ -13,6 +13,7 @@ import {StaticQuery} from "gatsby"
 import '../styles/globals.css'
 import ContactPanel from "../Components/ContactPanel"
 import Footer from "../Components/Footer"
+import SEO from "../Components/SEO"
 const theme = createTheme({
   xxs: '0px',
   xs: '380px',
@@ -25,6 +26,7 @@ const theme = createTheme({
 export default function Home({data}) {
   return (
     <div style={{width: '100%', overflow: "hidden"}}>
+      <SEO />
       {/*Themeprovider ustawiający breakpointy dla styled-components*/}
       <ThemeProvider theme={theme}>
         <Header/>
