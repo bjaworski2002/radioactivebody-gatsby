@@ -7,7 +7,7 @@ const SEO = ({title, description, author, favicon}) => {
     <StaticQuery query={detailsQuery} render={data => {
       const metaDescription = description || data.site.siteMetadata.description
       const metaTitle = title || data.site.siteMetadata.title
-      const author = author || data.site.siteMetadata.author
+      const metaAuthor = author || data.site.siteMetadata.author
       const metaFavicon = favicon || data.site.siteMetadata.favicon
       return (
         <Helmet title={metaTitle} meta={[
