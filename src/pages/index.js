@@ -14,6 +14,7 @@ import '../styles/globals.css'
 import ContactPanel from "../Components/ContactPanel"
 import Footer from "../Components/Footer"
 import SEO from "../Components/SEO"
+
 const theme = createTheme({
   xxs: '0px',
   xs: '380px',

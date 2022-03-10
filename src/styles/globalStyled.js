@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { down } from "styled-breakpoints"
 
 export const SubTitle = styled.h2`
@@ -30,4 +30,32 @@ export const SubText = styled.p`
 
   font-weight: 200;
   padding-bottom: ${props => props.last ? `0.5rem` : `0`};
+`
+export const Appear = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
+export const AppearFromLeft = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`
+export const AppearFromRight = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 `

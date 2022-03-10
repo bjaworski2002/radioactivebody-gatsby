@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React, { useEffect } from "react"
 import {up, down, between, only} from 'styled-breakpoints';
+import {Appear} from "../styles/globalStyled"
 import Button from "./Button";
 export default function LandingPage() {
     return (
@@ -10,7 +11,7 @@ export default function LandingPage() {
                 {/*InnerCont - panel z napisami oraz przyciskami*/}
                 <InnerCont>
                     <TitleText>Treningi Personalne</TitleText>
-                    <SubText>Dopasowane do <br/> twoich potrzeb</SubText>
+                    <SubText>Dopasowane do twoich potrzeb</SubText>
                     <ButtonContainer>
                         <Button target={"aboutUs"} text={"Poznaj nas!"} size={24}/>
                         <Button target={"ourTrainings"} text={"Sprawdź!"} size={24}/>
@@ -54,8 +55,10 @@ const InnerCont = styled.div`
   width: min(850px, 90%);
   margin-left: 5%;
   margin-bottom: max(5%, 40px);
+  animation: ${Appear} 2s ease;
   * {
     margin-bottom: 1rem;
+    margin-top: 0.5rem;
   }
 `
 const TitleText = styled.h1`
@@ -63,7 +66,12 @@ const TitleText = styled.h1`
   font-size: 5rem;
   line-height: 6rem;
   font-weight: 800;
-
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: #000000 1px 0 10px;
+  ${down('lg')} {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
   ${down('sm')} {
     font-size: 3.5rem;
     line-height: 4rem;
@@ -71,13 +79,13 @@ const TitleText = styled.h1`
 `
 const SubText = styled.h2`
   color: white;
-  font-size: 4rem;
-  font-weight: 200;
-
+  font-size: 3.5rem;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: #000000 1px 0 10px;
   ${down('md')} {
     font-size: 3rem;
   }
-
   ${down('sm')} {
     font-size: 2.5rem;
   }
