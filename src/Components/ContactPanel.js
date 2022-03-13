@@ -8,7 +8,7 @@ import Button from "./Button"
 
 const ContactPanel = () => {
   return (<StaticQuery query={query} render={data =>
-    <Section id={"contact"}>
+    <Section data-aos="fade-right" id={"contact"}>
       <ImgCont>
         <img
           alt=""

@@ -7,7 +7,7 @@ import {SubTitle, SubText} from "../../styles/globalStyled"
 export default function SingleTrainer(props) {
   return (
     <MainCont isEven={props.index % 2 === 0}>
-      <TextCont isEven={props.index % 2 === 0}>
+      <TextCont isEven={props.index % 2 === 0} data-aos={props.index % 2 === 0 ? "fade-left" : "fade-right"}>
         <SubTitle>{`${props.data.attributes.imie} ${props.data.attributes.nazwisko}`}</SubTitle>
         <SubText>{props.data.attributes.opis}</SubText>
       </TextCont>

@@ -6,7 +6,7 @@ import React from 'react';
 import {StaticImage} from "gatsby-plugin-image"
 export default function AboutUs(props) {
     return (
-        <Container id={"aboutUs"}>
+        <Container data-aos="fade-left" id={"aboutUs"}>
             {/*Tekst panelu po lewej stronie. Możliwość zmiany na tekst pobierany z CMS-a*/}
             <Left>
                 <SubTitle>Kim jesteśmy?</SubTitle>

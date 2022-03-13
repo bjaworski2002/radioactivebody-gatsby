@@ -8,7 +8,7 @@ export default function MeetUs(props) {
     return (
         <Container id={"coaches"}>
             {/*Tekst panelu po lewej stronie. Możliwość zmiany na tekst pobierany z CMS-a*/}
-            <Left>
+            <Left data-aos="fade-right">
                 <SubTitle>Poznaj nas!</SubTitle>
                 <SubText>RadioActiveBody to sztab gruntownie
                   wykształconych i wykwalifikowanych

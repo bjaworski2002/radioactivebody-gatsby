@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from "react"
 import Header from "../Components/Header";
 import LandingPage from "../Components/LandingPage";
 import {ThemeProvider} from "styled-components";
@@ -14,7 +14,8 @@ import '../styles/globals.css'
 import ContactPanel from "../Components/ContactPanel"
 import Footer from "../Components/Footer"
 import SEO from "../Components/SEO"
-
+import AOS from 'aos';
+import "aos/dist/aos.css";
 const theme = createTheme({
   xxs: '0px',
   xs: '380px',
@@ -25,6 +26,10 @@ const theme = createTheme({
 })
 
 export default function Home({data}) {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, [])
   return (
     <div style={{width: '100%', overflow: "hidden"}}>
       <SEO />

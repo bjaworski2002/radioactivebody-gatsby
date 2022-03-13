@@ -9,7 +9,7 @@ export default function WorkoutItem(props) {
     console.log(`${process.env.STRAPI_API_URL}${props.data.image.data[0].attributes.url}`)
   }, [])
   return (
-    <Container>
+    <Container data-aos="fade-left">
       <ArrowsCont>
         <StaticImage src={"../../assets/Strzalki2.svg"} alt={""} objectFit={"contain"}/>
       </ArrowsCont>

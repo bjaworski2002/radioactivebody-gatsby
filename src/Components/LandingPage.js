@@ -5,11 +5,11 @@ import {Appear} from "../styles/globalStyled"
 import Button from "./Button";
 export default function LandingPage() {
     return (
-        <Section id={"landingPage"}>
+        <Section data-aos="fade-right" id={"landingPage"}>
             {/*OuterCont - Kontener o wysokości i szerokości screena. Użyty do zastosowania flexa*/}
             <OuterCont>
                 {/*InnerCont - panel z napisami oraz przyciskami*/}
-                <InnerCont>
+                <InnerCont data-aos="zoom-in">
                     <TitleText>Treningi Personalne</TitleText>
                     <SubText>Dopasowane do twoich potrzeb</SubText>
                     <ButtonContainer>
@@ -55,7 +55,6 @@ const InnerCont = styled.div`
   width: min(850px, 90%);
   margin-left: 5%;
   margin-bottom: max(5%, 40px);
-  animation: ${Appear} 2s ease;
   * {
     margin-bottom: 1rem;
     margin-top: 0.5rem;
