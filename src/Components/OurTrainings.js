@@ -6,7 +6,7 @@ import {SubTitle, SubText} from "../styles/globalStyled"
 
 export default function OurTrainings(props) {
     return (
-        <Container id={"ourTrainings"}>
+        <Container data-aos="fade-right" id={"ourTrainings"}>
             {/*Tekst panelu po prawej stronie. Możliwość zmiany na tekst pobierany z CMS-a*/}
             <Left>
                 <SubTitle>Nasze treningi</SubTitle>
@@ -21,7 +21,7 @@ export default function OurTrainings(props) {
                 <ImageCont>
                   <img
                     alt=""
-                    src={`${process.env.STRAPI_IMAGE_URL}/oferta_1890af6d70.png`}
+                    src={`https://res.cloudinary.com/dcmlieuld/image/upload/v1644575087/thumbnail_oferta_ba9a865c18.png`}
                   />
                 </ImageCont>
                 <SvgCont>

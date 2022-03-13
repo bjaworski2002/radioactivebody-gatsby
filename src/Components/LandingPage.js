@@ -1,16 +1,17 @@
 import styled from "styled-components";
 import React, { useEffect } from "react"
 import {up, down, between, only} from 'styled-breakpoints';
+import {Appear} from "../styles/globalStyled"
 import Button from "./Button";
 export default function LandingPage() {
     return (
-        <Section id={"landingPage"}>
+        <Section data-aos="fade-right" id={"landingPage"}>
             {/*OuterCont - Kontener o wysokości i szerokości screena. Użyty do zastosowania flexa*/}
             <OuterCont>
                 {/*InnerCont - panel z napisami oraz przyciskami*/}
-                <InnerCont>
+                <InnerCont data-aos="zoom-in">
                     <TitleText>Treningi Personalne</TitleText>
-                    <SubText>Dopasowane do <br/> twoich potrzeb</SubText>
+                    <SubText>Dopasowane do twoich potrzeb</SubText>
                     <ButtonContainer>
                         <Button target={"aboutUs"} text={"Poznaj nas!"} size={24}/>
                         <Button target={"ourTrainings"} text={"Sprawdź!"} size={24}/>
@@ -24,7 +25,7 @@ export default function LandingPage() {
               <BackgroundImage>
                 <img
                   alt=""
-                  src={`${process.env.STRAPI_IMAGE_URL}/large_tytul1_29dca2ac13.png`}
+                  src={`https://res.cloudinary.com/dcmlieuld/image/upload/v1644575100/large_tytul1_76feb15deb.png`}
                 />
               </BackgroundImage>
             </Background>
@@ -56,6 +57,7 @@ const InnerCont = styled.div`
   margin-bottom: max(5%, 40px);
   * {
     margin-bottom: 1rem;
+    margin-top: 0.5rem;
   }
 `
 const TitleText = styled.h1`
@@ -63,7 +65,12 @@ const TitleText = styled.h1`
   font-size: 5rem;
   line-height: 6rem;
   font-weight: 800;
-
+  font-family: 'Red Hat Display', sans-serif;
+  //text-shadow: #000000 1px 0 10px;
+  ${down('lg')} {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
   ${down('sm')} {
     font-size: 3.5rem;
     line-height: 4rem;
@@ -71,13 +78,12 @@ const TitleText = styled.h1`
 `
 const SubText = styled.h2`
   color: white;
-  font-size: 4rem;
-  font-weight: 200;
-
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-family: 'Red Hat Display', sans-serif;
   ${down('md')} {
     font-size: 3rem;
   }
-
   ${down('sm')} {
     font-size: 2.5rem;
   }

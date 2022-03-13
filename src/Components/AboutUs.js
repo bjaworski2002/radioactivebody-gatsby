@@ -6,7 +6,7 @@ import React from 'react';
 import {StaticImage} from "gatsby-plugin-image"
 export default function AboutUs(props) {
     return (
-        <Container id={"aboutUs"}>
+        <Container data-aos="fade-left" id={"aboutUs"}>
             {/*Tekst panelu po lewej stronie. Możliwość zmiany na tekst pobierany z CMS-a*/}
             <Left>
                 <SubTitle>Kim jesteśmy?</SubTitle>
@@ -26,7 +26,7 @@ export default function AboutUs(props) {
                 <ImageCont>
                   <img
                     alt=""
-                    src={`${process.env.STRAPI_IMAGE_URL}/medium_o_nas_984bf4dcc0.png`}
+                    src={`https://res.cloudinary.com/dcmlieuld/image/upload/v1644571093/small_o_nas_1bf909e692.png`}
                   />
                     {/*<Image src={"/medium_o_nas_984bf4dcc0.png"} layout={"fill"} objectFit={"cover"}
                            objectPosition={"bottom center"}/>*/}

@@ -5,9 +5,11 @@ import Button from "../Button"
 import { StaticImage } from "gatsby-plugin-image"
 
 export default function WorkoutItem(props) {
-
+  useEffect(() => {
+    console.log(`${process.env.STRAPI_API_URL}${props.data.image.data[0].attributes.url}`)
+  }, [])
   return (
-    <Container>
+    <Container data-aos="fade-left">
       <ArrowsCont>
         <StaticImage src={"../../assets/Strzalki2.svg"} alt={""} objectFit={"contain"}/>
       </ArrowsCont>
@@ -19,7 +21,7 @@ export default function WorkoutItem(props) {
       </ButtonCont>
       <WorkOutImg
         alt=""
-        src={`${process.env.STRAPI_API_URL}${props.data.image.data[0].attributes.url}`}
+        src={`${props.data.image.data[0].attributes.url}`}
       />
       <Title>{props.data.nazwa}</Title>
       <Paragraph>{props.data.opis}</Paragraph>
@@ -67,7 +69,8 @@ const SubTitle = styled.h3`
 const Paragraph = styled.p`
   font-size: 1rem;
   line-height: 1.25rem;
-  font-weight: 200;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
   ${down('md')}{
     font-size: 0.9rem;
     line-height: 1.1rem;
@@ -89,5 +92,5 @@ const LinesCont = styled.div`
 `
 const ButtonCont = styled.div`
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 0.5rem;
 `

@@ -8,11 +8,11 @@ import Button from "./Button"
 
 const ContactPanel = () => {
   return (<StaticQuery query={query} render={data =>
-    <Section id={"contact"}>
+    <Section data-aos="fade-right" id={"contact"}>
       <ImgCont>
         <img
           alt=""
-          src={`${process.env.STRAPI_IMAGE_URL}/medium_kontakt_dbbd5ffe84.png`}
+          src={`https://res.cloudinary.com/dcmlieuld/image/upload/v1647195961/Przechwytywanie_25d5312950.png`}
         />
       </ImgCont>
       <FormCont>
@@ -24,10 +24,16 @@ const ContactPanel = () => {
         <Form>
           <label htmlFor={"title"}><b><i>Tytuł maila:</i></b></label>
           <input type={"text"} id={"title"} placeholder={"Tytuł maila"} />
+
           <label htmlFor={"mail"}><b><i>Adres e-mail nadawcy:</i></b></label>
           <input type={"email"} id={"mail"} placeholder={"Adres e-mail nadawcy"} />
+
+          <label htmlFor={"phone"}><b><i>Numer telefonu nadawcy:</i></b></label>
+          <input type={"number"} id={"phone"} placeholder={"Numer telefonu nadawcy"} />
+
           <label htmlFor={"text"}><b><i>Treść maila:</i></b></label>
           <textarea cols={"10"} rows={"10"} id={"text"} placeholder={"Treść maila"} />
+
           <Button size={18} text={"Wyślij!"} />
         </Form>
       </FormCont>
@@ -132,8 +138,8 @@ const Form = styled.form`
     min-width: 80%;
     color: white;
     background-color: #464646;
-    font-family: "PlusJakartaSans";
-    font-weight: bold;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 800;
     border: none;
     padding-left: 1.25rem;
     padding-top: 0.2rem;

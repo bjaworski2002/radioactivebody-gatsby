@@ -1,26 +1,27 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { up, down, between, only } from "styled-breakpoints"
 import { StaticImage } from "gatsby-plugin-image"
 import {SubTitle, SubText} from "../../styles/globalStyled"
 
 export default function SingleTrainer(props) {
+  useEffect(() => {
+    console.log(props.data.id)
+  }, [])
   return (
     <MainCont isEven={props.index % 2 === 0}>
-      <TextCont isEven={props.index % 2 === 0}>
+      <TextCont isEven={props.index % 2 === 0} data-aos={props.index % 2 === 0 ? "fade-left" : "fade-right"}>
         <SubTitle>{`${props.data.attributes.imie} ${props.data.attributes.nazwisko}`}</SubTitle>
         <SubText>{props.data.attributes.opis}</SubText>
+        {props.showButtons ? <TrainerHref href={`/trainer?id=${props.data.id}`}>Dowiedz się więcej!</TrainerHref> : null}
       </TextCont>
       <ImageOuter isEven={props.index % 2 === 0}>
         <ImageCont>
           <img
             alt=""
-            src={`${process.env.STRAPI_API_URL}${props.data.attributes.image.data.attributes.url}`}
+            src={`${props.data.attributes.image.data.attributes.url}`}
           />
         </ImageCont>
-        <SvgCont isEven={props.index % 2 === 0}>
-          <StaticImage src={"../../assets/trainerLines.svg"} alt={""} />
-        </SvgCont>
       </ImageOuter>
     </MainCont>
   )
@@ -87,4 +88,20 @@ const SvgCont = styled.div`
   position: absolute;
   top: 50%;
   transform: ${props => props.isEven ? `translateX(10%) translateY(15%)` : `translateX(-10%) translateY(15%) rotateY(180deg)`};;
+`
+const TrainerHref = styled.a`
+  position: relative;
+  top: 2rem;
+  padding: 0.5em 1em;
+  border: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-radius: 1em;
+  color: black;
+  background-color: #FFDA54;
+  transition: 0.2s;
+  opacity: 0.8;
+  :hover{
+    opacity: 1;
+  }
 `

@@ -8,7 +8,7 @@ export default function MeetUs(props) {
     return (
         <Container id={"coaches"}>
             {/*Tekst panelu po lewej stronie. Możliwość zmiany na tekst pobierany z CMS-a*/}
-            <Left>
+            <Left data-aos="fade-right">
                 <SubTitle>Poznaj nas!</SubTitle>
                 <SubText>RadioActiveBody to sztab gruntownie
                   wykształconych i wykwalifikowanych
@@ -24,14 +24,11 @@ export default function MeetUs(props) {
                 <ImageCont>
                   <img
                     alt=""
-                    src={`${process.env.STRAPI_IMAGE_URL}/large_trenerzy_d21913ffdb.png`}
+                    src={`https://res.cloudinary.com/dcmlieuld/image/upload/v1644575104/medium_trenerzy_98e4d6404f.png`}
                   />
                     {/*<Image src={"/medium_o_nas_984bf4dcc0.png"} layout={"fill"} objectFit={"cover"}
                            objectPosition={"bottom center"}/>*/}
                 </ImageCont>
-                <SvgCont>
-                  <StaticImage src={"../assets/circle.svg"} alt={""}/>
-                </SvgCont>
             </Right>
         </Container>
     )

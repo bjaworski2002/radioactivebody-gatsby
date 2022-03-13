@@ -8,7 +8,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
-  { width: 795, itemsToShow: 2 },
+  { width: 790, itemsToShow: 2 },
   { width: 1200, itemsToShow: 3 },
   { width: 1600, itemsToShow: 4 }
 ]
@@ -26,7 +26,7 @@ const WorkoutTypes = ({ data }) => {
   return (
     <StaticQuery query={query} render={data =>
       <Section>
-        <Carousel renderArrow={myArrow} breakPoints={breakPoints}
+        <Carousel renderArrow={myArrow} breakPoints={breakPoints} disableArrowsOnEnd={true}
           /*style={{ overflow: "visible", backgroundColor: "red" }}*/>
           {data.allStrapiTrenings.nodes[0].data.map((e, index) => <WorkoutItem data={e.attributes} key={index} />)}
         </Carousel>
