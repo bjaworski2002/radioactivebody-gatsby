@@ -92,5 +92,5 @@ const LinesCont = styled.div`
 `
 const ButtonCont = styled.div`
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 0.5rem;
 `

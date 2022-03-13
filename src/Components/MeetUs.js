@@ -29,9 +29,6 @@ export default function MeetUs(props) {
                     {/*<Image src={"/medium_o_nas_984bf4dcc0.png"} layout={"fill"} objectFit={"cover"}
                            objectPosition={"bottom center"}/>*/}
                 </ImageCont>
-                <SvgCont>
-                  <StaticImage src={"../assets/circle.svg"} alt={""}/>
-                </SvgCont>
             </Right>
         </Container>
     )
