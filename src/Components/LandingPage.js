@@ -66,8 +66,8 @@ const TitleText = styled.h1`
   font-size: 5rem;
   line-height: 6rem;
   font-weight: 800;
-  font-family: 'Open Sans', sans-serif;
-  text-shadow: #000000 1px 0 10px;
+  font-family: 'Red Hat Display', sans-serif;
+  //text-shadow: #000000 1px 0 10px;
   ${down('lg')} {
     font-size: 4rem;
     line-height: 4.5rem;
@@ -80,9 +80,8 @@ const TitleText = styled.h1`
 const SubText = styled.h2`
   color: white;
   font-size: 3.5rem;
-  font-weight: 300;
-  font-family: 'Open Sans', sans-serif;
-  text-shadow: #000000 1px 0 10px;
+  font-weight: 400;
+  font-family: 'Red Hat Display', sans-serif;
   ${down('md')} {
     font-size: 3rem;
   }
