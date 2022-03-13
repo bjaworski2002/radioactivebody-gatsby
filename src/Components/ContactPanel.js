@@ -12,7 +12,7 @@ const ContactPanel = () => {
       <ImgCont>
         <img
           alt=""
-          src={`https://res.cloudinary.com/dcmlieuld/image/upload/v1644575091/large_kontakt_7f45d3eabc.png`}
+          src={`https://res.cloudinary.com/dcmlieuld/image/upload/v1647195961/Przechwytywanie_25d5312950.png`}
         />
       </ImgCont>
       <FormCont>

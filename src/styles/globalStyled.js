@@ -29,7 +29,7 @@ export const SubText = styled.p`
     line-height: 1.4rem;
   }
 
-  font-weight: 400;
+  font-weight: 300;
   padding-bottom: ${props => props.last ? `0.5rem` : `0`};
 `
 export const Appear = keyframes`
