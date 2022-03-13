@@ -24,10 +24,16 @@ const ContactPanel = () => {
         <Form>
           <label htmlFor={"title"}><b><i>Tytuł maila:</i></b></label>
           <input type={"text"} id={"title"} placeholder={"Tytuł maila"} />
+
           <label htmlFor={"mail"}><b><i>Adres e-mail nadawcy:</i></b></label>
           <input type={"email"} id={"mail"} placeholder={"Adres e-mail nadawcy"} />
+
+          <label htmlFor={"phone"}><b><i>Numer telefonu nadawcy:</i></b></label>
+          <input type={"number"} id={"phone"} placeholder={"Numer telefonu nadawcy"} />
+
           <label htmlFor={"text"}><b><i>Treść maila:</i></b></label>
           <textarea cols={"10"} rows={"10"} id={"text"} placeholder={"Treść maila"} />
+
           <Button size={18} text={"Wyślij!"} />
         </Form>
       </FormCont>

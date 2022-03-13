@@ -20,6 +20,7 @@ module.exports = {
     `gatsby-transformer-sharp`, // Needed for dynamic images
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-use-query-params",
     {
       resolve: `gatsby-source-strapi`,
       options: {
