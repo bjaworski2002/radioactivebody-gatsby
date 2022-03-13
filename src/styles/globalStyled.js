@@ -15,6 +15,7 @@ export const SubTitle = styled.h2`
 `
 export const SubText = styled.p`
   color: white;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.4rem;
   line-height: 1.7rem;
 
@@ -28,7 +29,7 @@ export const SubText = styled.p`
     line-height: 1.4rem;
   }
 
-  font-weight: 200;
+  font-weight: 400;
   padding-bottom: ${props => props.last ? `0.5rem` : `0`};
 `
 export const Appear = keyframes`

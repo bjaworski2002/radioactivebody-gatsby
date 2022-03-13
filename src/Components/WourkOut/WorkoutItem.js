@@ -69,7 +69,8 @@ const SubTitle = styled.h3`
 const Paragraph = styled.p`
   font-size: 1rem;
   line-height: 1.25rem;
-  font-weight: 200;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
   ${down('md')}{
     font-size: 0.9rem;
     line-height: 1.1rem;

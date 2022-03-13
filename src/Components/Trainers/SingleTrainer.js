@@ -18,9 +18,6 @@ export default function SingleTrainer(props) {
             src={`${props.data.attributes.image.data.attributes.url}`}
           />
         </ImageCont>
-        <SvgCont isEven={props.index % 2 === 0}>
-          <StaticImage src={"../../assets/trainerLines.svg"} alt={""} />
-        </SvgCont>
       </ImageOuter>
     </MainCont>
   )

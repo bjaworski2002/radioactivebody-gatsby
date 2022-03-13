@@ -138,8 +138,8 @@ const Form = styled.form`
     min-width: 80%;
     color: white;
     background-color: #464646;
-    font-family: "PlusJakartaSans";
-    font-weight: bold;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 800;
     border: none;
     padding-left: 1.25rem;
     padding-top: 0.2rem;
