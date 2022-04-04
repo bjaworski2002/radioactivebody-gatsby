@@ -26,7 +26,7 @@ export default function AboutUs(props) {
                 <ImageCont>
                   <img
                     alt=""
-                    src={`https://res.cloudinary.com/dcmlieuld/image/upload/v1644571093/small_o_nas_1bf909e692.png`}
+                    src={"https://res.cloudinary.com/dcmlieuld/image/upload/v1649089926/large_o_nas_1bf909e692.jpg"}
                   />
                     {/*<Image src={"/medium_o_nas_984bf4dcc0.png"} layout={"fill"} objectFit={"cover"}
                            objectPosition={"bottom center"}/>*/}
@@ -87,13 +87,13 @@ const Right = styled.div`
 const ImageCont = styled.div`
   z-index: 1;
   position: absolute;
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 60%);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75%);
   width: 21rem;
   height: 28rem;
   * {
     position: relative;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: bottom center;
   }
 

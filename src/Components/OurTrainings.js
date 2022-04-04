@@ -21,7 +21,7 @@ export default function OurTrainings(props) {
                 <ImageCont>
                   <img
                     alt=""
-                    src={`https://res.cloudinary.com/dcmlieuld/image/upload/v1644575087/thumbnail_oferta_ba9a865c18.png`}
+                    src={"https://res.cloudinary.com/dcmlieuld/image/upload/v1649088993/small_oferta_ba9a865c18.jpg"}
                   />
                 </ImageCont>
                 <SvgCont>
@@ -80,8 +80,10 @@ const ImageCont = styled.div`
   height: 22rem;
   * {
     position: relative;
+    border-radius: 50%;
+    height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
     object-position: bottom center;
   }
   ${down("sm")} {
