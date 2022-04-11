@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled, { css } from "styled-components"
-import Logo from "../assets/Logo.svg"
+import Logo from "../assets/Logo.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebookSquare, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { up, down, between, only } from "styled-breakpoints"
@@ -12,8 +12,7 @@ export default function Header() {
   const [active, setActive] = useState(false)
   return (<Container>
     <Left>
-      <Link to={"landingPage"} smooth={true} duration={500}><StaticImage src={"../assets/Logo.svg"}
-                                                                         alt={"RadioActiveBody"} /></Link>
+      <Link to={"landingPage"} smooth={true} duration={500}><StaticImage src={"../assets/Logo.png"} alt={"RadioActiveBody"} /></Link>
     </Left>landingPage
     {/*Hiperłącza headera dostępne przy szerokościach lg i większych*/}
     <Right>
@@ -54,9 +53,12 @@ const Container = styled.header`
   background: linear-gradient(180deg, #000000 55.94%, rgba(0, 0, 0, 0) 100%);
 `
 const Left = styled.div`
-  height: 90%;
-  margin: 0.7rem;
-  width: 11rem;
+  height: 80%;
+  margin: 1px 0.3rem 0.3rem;
+
+  * {
+    height: 100%;
+  }
 `
 const Right = styled.div`
   height: 100%;

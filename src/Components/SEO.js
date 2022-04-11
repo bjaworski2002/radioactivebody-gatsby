@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql, StaticQuery } from "gatsby"
-import fav from "../assets/favicon.svg"
+import fav from "../assets/favicon.png"
 
 const SEO = ({ title, description, author, favicon }) => {
   return (
