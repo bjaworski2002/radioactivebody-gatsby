@@ -12,9 +12,8 @@ export default function Header(props) {
   const [active, setActive] = useState(false)
   return (<Container>
     <Left>
-      <Link to={"landingPage"} smooth={true} duration={500}><StaticImage src={"../assets/Logo.png"}
-                                                                         alt={"RadioActiveBody"} /></Link>
-    </Left>landingPage
+      <Link to={"landingPage"} smooth={true} duration={500}><StaticImage objectFit="cover" src={"../assets/Logo.png"} alt={"RadioActiveBody"} /></Link>
+    </Left>
     {/*Hiperłącza headera dostępne przy szerokościach lg i większych*/}
     <Right>
       {!props.hideOptions ?
@@ -65,16 +64,17 @@ const Container = styled.header`
   background: linear-gradient(180deg, #000000 55.94%, rgba(0, 0, 0, 0) 100%);
 `
 const Left = styled.div`
+  position: relative;
   height: 80%;
+  width: 17rem;
   margin: 1px 0.3rem 0.3rem;
-  max-width: 70%;
   * {
     height: 100%;
   }
 `
 const Right = styled.div`
   height: 100%;
-  margin: 1rem;
+  margin: 1rem 1rem 1rem 0;
   display: flex;
 
   ${down("md")} {
@@ -99,7 +99,6 @@ const HrefCss = css`
 const Href = styled(Link)`${HrefCss}`
 const AHref = styled.a`
   ${HrefCss};
-
   span {
     margin-left: 0.4rem;
     position: relative;
@@ -111,7 +110,6 @@ const Hamburger = styled.div`
   cursor: pointer;
   background-color: transparent;
   margin: 0.5rem 1rem;
-
   ${up("md")} {
     display: none;
   }
