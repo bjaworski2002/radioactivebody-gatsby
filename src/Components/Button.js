@@ -4,7 +4,7 @@ import {Link} from "react-scroll"
 export default function Button(props){
     return (
       <Link to={props.target} smooth={true} duration={500}>
-        <StyledButton style={{fontSize: props.size + 'px'}}>
+        <StyledButton style={{fontSize: props.size + 'px'}} onClick={props.action}>
             {props.text}
         </StyledButton>
       </Link>
@@ -21,5 +21,6 @@ const StyledButton = styled.button`
   opacity: 0.8;
   :hover{
     opacity: 1;
+    cursor: pointer;
   }
 `

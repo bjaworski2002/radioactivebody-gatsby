@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import styled, { css } from "styled-components"
-import Logo from "../assets/Logo.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebookSquare, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { up, down, between, only } from "styled-breakpoints"
@@ -8,13 +7,14 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "react-scroll"
 
 export default function Header(props) {
-  /*State odpowiadający za aktywne menu hamburgerowe*/
   const [active, setActive] = useState(false)
   return (<Container>
     <Left>
-      <Link to={"landingPage"} smooth={true} duration={500}><StaticImage objectFit="cover" src={"../assets/Logo.png"} alt={"RadioActiveBody"} /></Link>
+      {!props.hideOptions ?
+        <Link to={"landingPage"} smooth={true} duration={500}><StaticImage objectFit="cover" src={"../assets/Logo.png"} alt={"RadioActiveBody"} /></Link>
+        : <a href={"/"}><StaticImage objectFit="cover" src={"../assets/Logo.png"} alt={"RadioActiveBody"} /></a>
+      }
     </Left>
-    {/*Hiperłącza headera dostępne przy szerokościach lg i większych*/}
     <Right>
       {!props.hideOptions ?
         (<>
@@ -30,7 +30,6 @@ export default function Header(props) {
             style={{ height: "2rem" }} icon={faInstagram} /></AHref>
         </>) : null}
     </Right>
-    {/*Wysuwane menu dostępne przy szerokościach mniejszych niż lg*/}
     <Hamburger onClick={() => setActive(!active)}>
       <HamburgerBox>
         <HamburgerInner active={active} />
@@ -63,14 +62,23 @@ const Container = styled.header`
   width: 100%;
   background: linear-gradient(180deg, #000000 55.94%, rgba(0, 0, 0, 0) 100%);
 `
-const Left = styled.div`
+const LeftCss = css`
   position: relative;
   height: 80%;
   width: 17rem;
   margin: 1px 0.3rem 0.3rem;
+  transition: 0.2s;
   * {
     height: 100%;
   }
+  :hover {
+    transform: scale(0.95);
+    cursor: pointer;
+  }
+
+`
+const Left = styled.div`
+  ${LeftCss}
 `
 const Right = styled.div`
   height: 100%;

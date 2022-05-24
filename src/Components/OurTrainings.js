@@ -39,7 +39,6 @@ const Container = styled.section`
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-
   ${down("lg")} {
     flex-direction: column-reverse;
     text-align: center;
@@ -50,7 +49,6 @@ const Left = styled.div`
   * {
     margin-bottom: 1.5rem;
   }
-
   ${down("xl")} {
     width: 30rem;
   }
@@ -62,7 +60,6 @@ const Left = styled.div`
   }
 
 `
-
 const Right = styled.div`
   position: relative;
   width: 28rem;

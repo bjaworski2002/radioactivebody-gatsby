@@ -42,19 +42,20 @@ const Container = styled.div`
   border-radius: 1.5rem;
   overflow: visible;
   z-index: 1;
-  *{
+
+  * {
     margin-bottom: 0.4rem;
   }
-  ${down("md")}{
+
+  ${down("md")} {
     width: 18rem;
-    padding: 1rem;
-    padding-top: 1.5rem;
-    padding-bottom: 5rem;
+    padding: 1.5rem 1rem 5rem;
     overflow: hidden;
   }
-  ${down("sm")}{
+
+  ${down("sm")} {
     width: 16rem;
-    height:40rem;
+    height: 40rem;
   }
 `
 const WorkOutImg = styled.img`
@@ -68,7 +69,7 @@ const SubTitle = styled.h3`
 `
 const Paragraph = styled.p`
   font-size: 1rem;
-  line-height: 1.25rem;
+  line-height: 1.1rem;
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
   ${down('md')}{
