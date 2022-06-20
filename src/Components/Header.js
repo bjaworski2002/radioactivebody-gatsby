@@ -5,14 +5,13 @@ import { faFacebookSquare, faInstagram } from "@fortawesome/free-brands-svg-icon
 import { up, down, between, only } from "styled-breakpoints"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "react-scroll"
-
 export default function Header(props) {
   const [active, setActive] = useState(false)
   return (<Container>
     <Left>
       {!props.hideOptions ?
-        <Link to={"landingPage"} smooth={true} duration={500}><StaticImage objectFit="cover" src={"../assets/Logo.png"} alt={"RadioActiveBody"} /></Link>
-        : <a href={"/"}><StaticImage objectFit="cover" src={"../assets/Logo.png"} alt={"RadioActiveBody"} /></a>
+        <Link to={"landingPage"} smooth={true} duration={500}><StaticImage data-aos="fade-right" objectFit="cover" src={"../assets/Logo.png"} alt={"RadioActiveBody"} /></Link>
+        : <a href={"/"}><StaticImage data-aos="fade-right" placeholder="tracedSVG" objectFit={"cover"} loading="eager" src={"../assets/Logo.png"} alt={"RadioActiveBody"} /></a>
       }
     </Left>
     <Right>

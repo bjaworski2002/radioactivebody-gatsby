@@ -10,15 +10,7 @@ export default function AboutUs(props) {
             {/*Tekst panelu po lewej stronie. Możliwość zmiany na tekst pobierany z CMS-a*/}
             <Left>
                 <SubTitle>Kim jesteśmy?</SubTitle>
-                <SubText>RadioActiveBody to ekskluzywne studio treningów personalnych, które mieści się w centrum
-                    Starego Podgórza w Krakowie.</SubText>
-                <SubText>Tu znajdziesz spokój, intymność, przyjazną atmosferę, gdzie z nami będziesz mógł realizować
-                    swoje cele!</SubText>
-                <SubText last>Każde z nas ma inną historię, każdy z nas zaczynał inaczej, ale stworzyliśmy razem zespół
-                    ludzi z pasją.
-                    Powstało studio treningów personalnych jedyne w swoim rodzaju! Jako team dążymy do perfekcji i
-                    najwyższych kwalifikacji.
-                    To jest to, co nas odróżnia.</SubText>
+                <SubText>RadioActiveBody to studio ekskluzywnych treningów personalnych mieszczące się w centrum Starego Podgórza w Krakowie. Znajdziesz u nas wszystko to czego potrzebujesz – spokój, intymność i przyjazną atmosferę, dzięki której zrealizujesz każdy ze swoich celów! Członkowie naszego zespołu to osoby różnorodne, które łączy jedno – pełnia pasji. Dzięki naszym wspólnym staraniom utworzyliśmy studio jedyne w swoim rodzaju, którego kadra dąży do perfekcji i ciągłego podnoszenia swoich kwalifikacji. To właśnie chęć bycia najlepszymi w swoim fachu jest tym, co odróżnia nas od innych.</SubText>
                 <Button target={"ourTrainings"} text={"Zobacz naszą ofertę!"} size={24}/>
             </Left>
             {/*Zdjęcie oraz efekt svg*/}
@@ -28,8 +20,6 @@ export default function AboutUs(props) {
                     alt=""
                     src={"https://res.cloudinary.com/dcmlieuld/image/upload/v1649089926/large_o_nas_1bf909e692.jpg"}
                   />
-                    {/*<Image src={"/medium_o_nas_984bf4dcc0.png"} layout={"fill"} objectFit={"cover"}
-                           objectPosition={"bottom center"}/>*/}
                 </ImageCont>
                 <SvgCont>
                   <StaticImage src={"../assets/Kropki.svg"} alt={""}/>
