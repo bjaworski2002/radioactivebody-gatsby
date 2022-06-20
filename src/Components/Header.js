@@ -83,7 +83,6 @@ const Right = styled.div`
   height: 100%;
   margin: 1rem 1rem 1rem 0;
   display: flex;
-
   ${down("md")} {
     display: none;
   }
