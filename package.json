@@ -14,11 +14,14 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.17",
     "aos": "^2.3.4",
     "babel-plugin-styled-components": "^2.0.2",
     "dotenv": "^16.0.0",
+    "emailjs": "^4.0.0",
     "gatsby": "^4.6.0",
     "gatsby-plugin-image": "^2.6.0",
     "gatsby-plugin-react-helmet": "^5.7.0",
@@ -43,9 +46,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-hello-world.git"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-hello-world#readme",
+  "main": "gatsby-config.js",
+  "author": ""
 }

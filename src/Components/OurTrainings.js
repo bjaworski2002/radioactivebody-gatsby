@@ -21,7 +21,7 @@ export default function OurTrainings(props) {
                 <ImageCont>
                   <img
                     alt=""
-                    src={`https://res.cloudinary.com/dcmlieuld/image/upload/v1644575087/thumbnail_oferta_ba9a865c18.png`}
+                    src={"https://res.cloudinary.com/dcmlieuld/image/upload/v1649088993/small_oferta_ba9a865c18.jpg"}
                   />
                 </ImageCont>
                 <SvgCont>
@@ -39,7 +39,6 @@ const Container = styled.section`
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-
   ${down("lg")} {
     flex-direction: column-reverse;
     text-align: center;
@@ -50,7 +49,6 @@ const Left = styled.div`
   * {
     margin-bottom: 1.5rem;
   }
-
   ${down("xl")} {
     width: 30rem;
   }
@@ -62,7 +60,6 @@ const Left = styled.div`
   }
 
 `
-
 const Right = styled.div`
   position: relative;
   width: 28rem;
@@ -80,8 +77,10 @@ const ImageCont = styled.div`
   height: 22rem;
   * {
     position: relative;
+    border-radius: 50%;
+    height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
     object-position: bottom center;
   }
   ${down("sm")} {

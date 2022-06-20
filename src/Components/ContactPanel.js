@@ -1,12 +1,26 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { graphql, StaticQuery } from "gatsby"
 import styled from "styled-components"
 import { up, down, between, only } from "styled-breakpoints"
 import { SubTitle, SubText } from "../styles/globalStyled"
-
+import emailjs from '@emailjs/browser';
 import Button from "./Button"
 
 const ContactPanel = () => {
+  const [form, setForm] = useState({
+    title: "",
+    mail: "",
+    phone: "",
+    text: ""
+  })
+  const ChangeInputValue = (e) => {
+      setForm({...form, [e.target.id]: e.target.value})
+      console.log(form)
+  }
+  const sendEmail = () => {
+    console.log(form)
+    emailjs.sendForm()
+  }
   return (<StaticQuery query={query} render={data =>
     <Section data-aos="fade-right" id={"contact"}>
       <ImgCont>
@@ -23,18 +37,18 @@ const ContactPanel = () => {
         <SubText><b><i>Lub napisz do nas!</i></b></SubText>
         <Form>
           <label htmlFor={"title"}><b><i>Tytuł maila:</i></b></label>
-          <input type={"text"} id={"title"} placeholder={"Tytuł maila"} />
+          <input type={"text"} id={"title"} placeholder={"Tytuł maila"} value={form.title} onChange={(e) => ChangeInputValue(e)}/>
 
           <label htmlFor={"mail"}><b><i>Adres e-mail nadawcy:</i></b></label>
-          <input type={"email"} id={"mail"} placeholder={"Adres e-mail nadawcy"} />
+          <input type={"email"} id={"mail"} placeholder={"Adres e-mail nadawcy"} onChange={(e) => ChangeInputValue(e)}/>
 
           <label htmlFor={"phone"}><b><i>Numer telefonu nadawcy:</i></b></label>
-          <input type={"number"} id={"phone"} placeholder={"Numer telefonu nadawcy"} />
+          <input type={"number"} id={"phone"} placeholder={"Numer telefonu nadawcy"} onChange={(e) => ChangeInputValue(e)}/>
 
           <label htmlFor={"text"}><b><i>Treść maila:</i></b></label>
-          <textarea cols={"10"} rows={"10"} id={"text"} placeholder={"Treść maila"} />
+          <textarea cols={"10"} rows={"10"} id={"text"} placeholder={"Treść maila"} onChange={(e) => ChangeInputValue(e)}/>
 
-          <Button size={18} text={"Wyślij!"} />
+          <Button size={18} text={"Wyślij!"} action={() => sendEmail()} />
         </Form>
       </FormCont>
     </Section>

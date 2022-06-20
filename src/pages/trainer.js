@@ -33,7 +33,7 @@ export default function Home({data}) {
       <SEO />
       {/*Themeprovider ustawiający breakpointy dla styled-components*/}
       <ThemeProvider theme={theme}>
-        <Header/>
+        <Header hideOptions={true}/>
         <SubPageTrainers id={id} />
         <BreakLine reverse={false} />
         <ContactPanel />
