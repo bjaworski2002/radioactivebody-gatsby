@@ -11,7 +11,7 @@ const SubPageTrainers = (props) => {
       <Section>
         <HeaderTitle>Poznaj naszych trenerów!</HeaderTitle>
         <Hr />
-        {data.allStrapiTreners.nodes[0].data.filter(e => e.id === props.id).map((e, index) => <SingleTrainer index={index} data={e} />)}
+        {data.allStrapiTreners.nodes[0].data.filter(e => e.id === props.id).map((e, index) => <SingleTrainer full={true} index={index} data={e} />)}
       </Section>
     } />
   )

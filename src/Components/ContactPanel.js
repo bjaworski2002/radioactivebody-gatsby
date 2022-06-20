@@ -48,7 +48,7 @@ const ContactPanel = () => {
           <label htmlFor={"text"}><b><i>Treść maila:</i></b></label>
           <textarea cols={"10"} rows={"10"} id={"text"} placeholder={"Treść maila"} onChange={(e) => ChangeInputValue(e)}/>
 
-          <Button size={18} text={"Wyślij!"} action={() => sendEmail()} />
+          <Button size={18} text={"Wyślij"} action={() => sendEmail()} />
         </Form>
       </FormCont>
     </Section>

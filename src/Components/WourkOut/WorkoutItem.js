@@ -17,7 +17,7 @@ export default function WorkoutItem(props) {
         <StaticImage src={"../../assets/Kreski.svg"} alt={""} />
       </LinesCont>
       <ButtonCont>
-        <Button target={"contact"} text={"Zacznij już dziś!"} size={18} />
+        <Button target={"contact"} text={"Zacznij już dziś"} size={18} />
       </ButtonCont>
       <WorkOutImg
         alt=""

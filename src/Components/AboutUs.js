@@ -11,7 +11,7 @@ export default function AboutUs(props) {
             <Left>
                 <SubTitle>Kim jesteśmy?</SubTitle>
                 <SubText>RadioActiveBody to studio ekskluzywnych treningów personalnych mieszczące się w centrum Starego Podgórza w Krakowie. Znajdziesz u nas wszystko to czego potrzebujesz – spokój, intymność i przyjazną atmosferę, dzięki której zrealizujesz każdy ze swoich celów! Członkowie naszego zespołu to osoby różnorodne, które łączy jedno – pełnia pasji. Dzięki naszym wspólnym staraniom utworzyliśmy studio jedyne w swoim rodzaju, którego kadra dąży do perfekcji i ciągłego podnoszenia swoich kwalifikacji. To właśnie chęć bycia najlepszymi w swoim fachu jest tym, co odróżnia nas od innych.</SubText>
-                <Button target={"ourTrainings"} text={"Zobacz naszą ofertę!"} size={24}/>
+                <Button target={"ourTrainings"} text={"Zobacz naszą ofertę"} size={24}/>
             </Left>
             {/*Zdjęcie oraz efekt svg*/}
             <Right>
