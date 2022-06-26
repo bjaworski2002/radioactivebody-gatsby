@@ -24,7 +24,7 @@ export default function MeetUs(props) {
                 <ImageCont>
                   <img
                     alt=""
-                    src={`https://res.cloudinary.com/dcmlieuld/image/upload/v1644575104/medium_trenerzy_98e4d6404f.png`}
+                    src={`https://res.cloudinary.com/dcmlieuld/image/upload/v1656268508/medium_Slawek_3_bcb7dc5b49.jpg`}
                   />
                     {/*<Image src={"/medium_o_nas_984bf4dcc0.png"} layout={"fill"} objectFit={"cover"}
                            objectPosition={"bottom center"}/>*/}
