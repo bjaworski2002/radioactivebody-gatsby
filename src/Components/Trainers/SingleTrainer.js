@@ -28,7 +28,17 @@ export default function SingleTrainer(props) {
       </MainCont>
       {props.full ?
         <MainCont>
-          <SubText style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>{props.data.attributes.opis.split("\n\n").map((e, index) => {if (index !== 0) return <TextCont style={{width: '70%', textAlign: 'center', margin: '1rem'}}>{e}</TextCont>})}</SubText>
+          <SubText style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center"
+          }}>{props.data.attributes.opis.split("\n\n").map((e, index, array) => {
+            if (index + 1 === array.length) return <TextCont style={{ width: "70%", textAlign: "center", margin: "1rem" }}><ul>{e.split("•").map((r, i) => {
+              if (i === 0) return <SubTitle>{r}</SubTitle>
+              return <li>{r}</li>
+            })}</ul></TextCont>
+            if (index !== 0) return <TextCont style={{ width: "70%", textAlign: "center", margin: "1rem" }}>{e}</TextCont>
+          })}</SubText>
         </MainCont>
         : null}
     </>
