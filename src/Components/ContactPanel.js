@@ -21,11 +21,13 @@ const ContactPanel = () => {
         />
       </ImgCont>
       <FormCont>
-        <FormSubTitle>Skontaktuj się z nami!</FormSubTitle>
-        <hr />
-        <SubText>Zadzwoń pod numer <b><i>{data.strapiDane.data.attributes.Telefon}</i></b>, przyjdź pod
-          adres <b><i>{data.strapiDane.data.attributes.Adres}</i></b></SubText>
-        <SubText><b><i>Lub napisz do nas!</i></b></SubText>
+        <FormHeader>
+          <FormSubTitle>Skontaktuj się z nami!</FormSubTitle>
+          <hr />
+          <SubText>Zadzwoń pod numer <b><i>{data.strapiDane.data.attributes.Telefon}</i></b>, przyjdź pod
+            adres <b><i>{data.strapiDane.data.attributes.Adres}</i></b></SubText>
+          <SubText><b><i>Lub napisz do nas!</i></b></SubText>
+        </FormHeader>
         <Form ref={form}>
           <label htmlFor={"title"}><b><i>Tytuł maila:</i></b></label>
           <input type={"text"} id={"title"} name={"title"} placeholder={"Tytuł maila"}/>
@@ -93,6 +95,23 @@ const ImgCont = styled.div`
     object-fit: cover;
   }
 `
+const FormHeader = styled.div`
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  ${up('lg')}{
+    transform: translateX(-4rem);
+  }
+  hr {
+    position: relative;
+    width: 100%;
+    border-bottom: 0.5rem solid #FFDA54;
+    ${down("lg")} {
+      position: relative;
+      width: 100%;
+    }
+  }
+`
 const FormCont = styled.div`
   display: flex;
   flex-direction: column;
@@ -103,18 +122,9 @@ const FormCont = styled.div`
   * {
     margin-bottom: 1rem;
   }
-
-  hr {
-    position: relative;
-    width: 120%;
-    border-bottom: 0.5rem solid #FFDA54;
-
-    ${down("lg")} {
-      position: relative;
-      width: 100%;
-    }
+  ${only("lg")}{
+    transform: translateX(3rem);
   }
-
   ${down("lg")} {
     position: relative;
     width: 95%;
@@ -133,7 +143,6 @@ const Form = styled.form`
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-
   input, textarea {
     min-height: 2.5rem;
     font-size: 1.1rem;
