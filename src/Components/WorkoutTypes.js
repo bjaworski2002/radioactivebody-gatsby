@@ -14,7 +14,6 @@ const breakPoints = [
 ]
 const WorkoutTypes = ({ data }) => {
   const myArrow = function({ type, onClick, isEdge }) {
-    const pointer = type === consts.PREV ? "👈" : "👉"
     const pointer2 = type === consts.PREV ?
       <ArrowsCont><StaticImage src={"../assets/arrow-left.svg"} alt={"👈"} /></ArrowsCont>
       : <ArrowsCont><StaticImage src={"../assets/arrow-right.svg"} alt={"👉"} /></ArrowsCont>
@@ -28,7 +27,7 @@ const WorkoutTypes = ({ data }) => {
       <Section>
         <Carousel renderArrow={myArrow} breakPoints={breakPoints} disableArrowsOnEnd={true}
           /*style={{ overflow: "visible", backgroundColor: "red" }}*/>
-          {data.allStrapiTrenings.nodes[0].data.map((e, index) => <WorkoutItem data={e.attributes} key={index} />)}
+          {data.allStrapiTrenings.nodes[0].data.sort((a,b) => (a.id > b.id) ? 1 : ((b.id > a.id) ? -1 : 0)).map((e, index) => <WorkoutItem data={e.attributes} key={index} />)}
         </Carousel>
       </Section>
     } />
@@ -39,7 +38,9 @@ export const query = graphql`
   query MyQuery {
     allStrapiTrenings {
       nodes {
+        id
         data {
+          id
           attributes {
             nazwa
             opis

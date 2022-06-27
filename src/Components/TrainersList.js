@@ -8,7 +8,7 @@ const TrainersList = () => {
   return (
     <StaticQuery query={query} render={data =>
       <Section>
-        {data.allStrapiTreners.nodes[0].data.map((e, index) => <SingleTrainer index={index} data={e} showButtons={true} />)}
+        {data.allStrapiTreners.nodes[0].data.sort((a,b) => (a.id > b.id) ? 1 : ((b.id > a.id) ? -1 : 0)).map((e, index) => <SingleTrainer index={index} data={e} showButtons={true} />)}
       </Section>
     } />
   )
