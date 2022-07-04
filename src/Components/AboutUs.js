@@ -18,7 +18,7 @@ export default function AboutUs(props) {
                 <ImageCont>
                   <img
                     alt=""
-                    src={"https://res.cloudinary.com/dcmlieuld/image/upload/v1656355622/large_Slawek_silownia_8_57b7bae4db.jpg"}
+                    src={"https://res.cloudinary.com/dcmlieuld/image/upload/v1656875780/Bez_nazwy_1_eb0f915c11.png"}
                   />
                 </ImageCont>
                 <SvgCont>
@@ -77,9 +77,9 @@ const Right = styled.div`
 const ImageCont = styled.div`
   z-index: 1;
   position: absolute;
-  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 75%);
-  width: 22rem;
-  height: 28rem;
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+  width: 24rem;
+  height: 24rem;
   * {
     position: relative;
     width: 100%;
@@ -88,8 +88,8 @@ const ImageCont = styled.div`
   }
 
   ${down("sm")} {
-    width: 18rem;
-    height: 26rem;
+    width: 20rem;
+    height: 20rem;
   }
 `
 const SvgCont = styled.div`
