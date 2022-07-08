@@ -37,10 +37,10 @@ export default function Header(props) {
     <Navigation active={active}>
       {!props.hideOptions ? (
         <>
-          <Href to={"aboutUs"} smooth={true} duration={500} menu>O nas</Href>
-          <Href to={"ourTrainings"} smooth={true} duration={500} menu>Oferta</Href>
-          <Href to={"coaches"} smooth={true} duration={500} menu>Trenerzy</Href>
-          <Href to={"contact"} smooth={true} duration={500} menu>Kontakt</Href>
+          <Href to={"aboutUs"} smooth={true} duration={500} onClick={() => setActive(false)} menu>O nas</Href>
+          <Href to={"ourTrainings"} smooth={true} duration={500} onClick={() => setActive(false)} menu>Oferta</Href>
+          <Href to={"coaches"} smooth={true} duration={500} onClick={() => setActive(false)} menu>Trenerzy</Href>
+          <Href to={"contact"} smooth={true} duration={500} onClick={() => setActive(false)} menu>Kontakt</Href>
         </>
       ) : null}
       <AHref href={"https://www.facebook.com/RadioactiveBody/"} rel={"external"} target={"_blank"} icon
